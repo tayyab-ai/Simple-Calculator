@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator - Developed by Tayyab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Header -->
+            <div class="calc-header">
+                <div class="brand">
+                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2" />
+                        <line x1="8" y1="6" x2="16" y2="6" />
+                        <line x1="8" y1="10" x2="16" y2="10" />
+                        <line x1="8" y1="14" x2="12" y2="14" />
+                    </svg>
+                    <span>Scientific Calc</span>
+                </div>
+                <div class="mode-toggle">
+                    <button class="mode-btn active" data-mode="deg">DEG</button>
+                    <button class="mode-btn" data-mode="rad">RAD</button>
+                    <button class="mode-btn" data-mode="grad">GRAD</button>
+                </div>
+            </div>
+
+            <!-- Display -->
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+
+            <!-- Keyboard -->
+            <div class="keyboard">
+                <!-- Scientific Functions Row 1 -->
+                <div class="keys-scientific">
+                    <button class="key key-func" data-action="sin">sin</button>
+                    <button class="key key-func" data-action="cos">cos</button>
+                    <button class="key key-func" data-action="tan">tan</button>
+                    <button class="key key-func" data-action="log">log</button>
+                    <button class="key key-func" data-action="ln">ln</button>
+                    <button class="key key-func" data-action="sqrt">√</button>
+                </div>
+
+                <!-- Scientific Functions Row 2 -->
+                <div class="keys-scientific">
+                    <button class="key key-func" data-action="asin">sin⁻¹</button>
+                    <button class="key key-func" data-action="acos">cos⁻¹</button>
+                    <button class="key key-func" data-action="atan">tan⁻¹</button>
+                    <button class="key key-func" data-action="pow10">10ˣ</button>
+                    <button class="key key-func" data-action="powE">eˣ</button>
+                    <button class="key key-func" data-action="xpow2">x²</button>
+                </div>
+
+                <!-- Scientific Functions Row 3 -->
+                <div class="keys-scientific">
+                    <button class="key key-func" data-action="factorial">n!</button>
+                    <button class="key key-func" data-action="pi">π</button>
+                    <button class="key key-func" data-action="e">e</button>
+                    <button class="key key-func" data-action="abs">|x|</button>
+                    <button class="key key-func" data-action="openParen">(</button>
+                    <button class="key key-func" data-action="closeParen">)</button>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Main Keys -->
+                <div class="keys-main">
+                    <div class="keys-row">
+                        <button class="key key-special" data-action="clear">AC</button>
+                        <button class="key key-special" data-action="backspace">⌫</button>
+                        <button class="key key-special" data-action="percent">%</button>
+                        <button class="key key-operator" data-action="/">÷</button>
+                    </div>
+                    <div class="keys-row">
+                        <button class="key key-number" data-action="7">7</button>
+                        <button class="key key-number" data-action="8">8</button>
+                        <button class="key key-number" data-action="9">9</button>
+                        <button class="key key-operator" data-action="*">×</button>
+                    </div>
+                    <div class="keys-row">
+                        <button class="key key-number" data-action="4">4</button>
+                        <button class="key key-number" data-action="5">5</button>
+                        <button class="key key-number" data-action="6">6</button>
+                        <button class="key key-operator" data-action="-">−</button>
+                    </div>
+                    <div class="keys-row">
+                        <button class="key key-number" data-action="1">1</button>
+                        <button class="key key-number" data-action="2">2</button>
+                        <button class="key key-number" data-action="3">3</button>
+                        <button class="key key-operator" data-action="+">+</button>
+                    </div>
+                    <div class="keys-row">
+                        <button class="key key-number" data-action="0">0</button>
+                        <button class="key key-number" data-action=".">.</button>
+                        <button class="key key-number" data-action="negate">+/−</button>
+                        <button class="key key-equals" data-action="equals">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="calc-footer">
+                <span>Developed by <strong>Tayyab</strong></span>
+                <div class="history-dot" id="historyDot" title="History"></div>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button class="history-clear" id="historyClear">Clear All</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="history-empty">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
